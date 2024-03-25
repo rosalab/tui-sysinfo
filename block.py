@@ -10,23 +10,16 @@ class Block(Static, inherit_bindings=False):
     DEFAULT_CSS = """
         Block {
             align-horizontal: center;
-            layout: grid;
-            grid-size: 1 2;
-            border: dashed red;
-            width: 15%;
-            margin-right: 5;
+            box-sizing: content-box;
+            border: round white;
+            width: 100%;
+            border-title-style: italic;
+            border-title-align: center;
         }
-
-        .title {
-            height: 1fr;
-            width: 1fr;
-            padding: 0;
-            margin: 0;
-        }
-        
+      
         .digits {
-            width: 1fr;
-            height: 1fr;
+            padding: 1;
+            text-align: center;
         }
     """
 
@@ -48,6 +41,7 @@ class Block(Static, inherit_bindings=False):
         }
 
     def on_mount(self):
+        self.border_title = self.func_maps[self.label]['title']
         self.set_interval(1, self.func_maps[self.label]['updateFunc'])
 
     def update_cpu(self):
@@ -63,5 +57,4 @@ class Block(Static, inherit_bindings=False):
         self.text = str(len(psutil.users()))
 
     def compose(self) -> ComposeResult:
-        yield Static(self.func_maps[self.label]['title'], classes="title")
         yield Digits(self.text, classes="digits")

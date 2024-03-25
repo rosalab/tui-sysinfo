@@ -7,8 +7,8 @@ class TuiSysInfo(App):
 
     def compose(self) -> ComposeResult:
         yield Sysinfo()
-        yield Static("Two", classes="box")
-        yield Static("Three", classes="box")
+        # yield Static("Two", classes="box")
+        # yield Static("Three", classes="box")
 
 
 if __name__ == "__main__":
