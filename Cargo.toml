@@ -1,0 +1,10 @@
+[package]
+name = "tui-todo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossterm = "0.27.0"
+ratatui = { version = "0.26.1", features = ["all-widgets"] }
+sysinfo = { version = "0.30.7" }
+anyhow = "1.0.81"
