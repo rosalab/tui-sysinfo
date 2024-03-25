@@ -23,8 +23,7 @@ class Weather(Static):
 
     def on_mount(self):
         self.border_title = "Weather Report"
-        self.update_weather()
-        self.set_interval(30, self.update_weather)
+        self.set_interval(60, self.update_weather)
 
     def update_weather(self):
         resp = requests.get("https://wttr.in/blacksburg?1pQ")
