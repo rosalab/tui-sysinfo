@@ -1,18 +1,3 @@
 Screen {
     layout: vertical;
 }
-
-.box-1 {
-    height: 25%;
-}
-
-.inner-box {
-    height: 100%;
-    width: 25%;
-    border: solid green;
-}
-
-.box {
-    background: red;
-    border: solid green;
-}

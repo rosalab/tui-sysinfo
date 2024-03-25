@@ -1,9 +1,7 @@
 from textual import events
 from textual.app import App, ComposeResult
 from textual.reactive import reactive
-from textual.widget import Widget
 from textual.widgets import Static, Digits
-from textual.containers import Container
 import psutil
 
 class Block(Static, inherit_bindings=False):
