@@ -5,7 +5,7 @@ use sysinfo::{System, Disks};
 use anyhow::Result;
 use ratatui::prelude::*;
 use ratatui::style::palette::tailwind;
-use ratatui::widgets::{Block, Borders, BorderType, Gauge, LineGauge, Padding, Paragraph};
+use ratatui::widgets::{Block, Borders, BorderType, Gauge, LineGauge, Padding, Paragraph, Wrap};
 use ratatui::widgets::block::Title;
 
 const RED: Color = tailwind::RED.c800;
@@ -50,6 +50,16 @@ pub fn render_sys_info(systemState: Arc<Mutex<System>>, frame: &mut Frame, area:
     Ok(())
 }
 
+pub fn render_active_user(frame: &mut Frame, area: Rect) -> Result<()> {
+    let user = get_active_user();
+    let paragraph = Paragraph::new(user)
+        .block(title_block("Active User"))
+        .alignment(Alignment::Center)
+        .wrap(Wrap { trim: true });
+    frame.render_widget(paragraph, area);
+    Ok(())
+}
+
 fn render_sys_info_widgets(frame: &mut Frame, title: &str, num: f64, area: Rect) {
     let ratio_num = if num >= 1.0 {
         1.0
@@ -81,4 +91,13 @@ fn title_block(title: &str) -> Block {
         .borders(Borders::ALL)
         .border_type(BorderType::Rounded)
         .fg(tailwind::SLATE.c200)
+}
+
+fn get_active_user() -> String {
+    let output = std::process::Command::new("who")
+        .output()
+        .expect("failed to execute process");
+    let output = String::from_utf8_lossy(&output.stdout);
+    let user = output.split_whitespace().next().unwrap_or("unknown");
+    user.to_string()
 }
