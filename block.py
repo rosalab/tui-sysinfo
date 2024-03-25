@@ -60,7 +60,7 @@ class Block(Static, inherit_bindings=False):
         self.text = str(psutil.disk_usage('/').percent) + "%"
 
     def update_active_sessions(self):
-        self.text = str(psutil.users())
+        self.text = str(len(psutil.users()))
 
     def compose(self) -> ComposeResult:
         yield Static(self.func_maps[self.label]['title'], classes="title")
