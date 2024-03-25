@@ -1,5 +1,0 @@
-Screen {
-    layout: grid;
-    grid-size: 4 1;
-}
-

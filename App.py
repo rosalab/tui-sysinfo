@@ -6,7 +6,7 @@ class TuiSysInfo(App):
     CSS_PATH = "tcss/app.tcss"
 
     def compose(self) -> ComposeResult:
-        yield Sysinfo("One", classes="box-1")
+        yield Sysinfo()
         yield Static("Two", classes="box")
         yield Static("Three", classes="box")
 

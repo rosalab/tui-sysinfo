@@ -1,16 +1,24 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Static
 from textual.containers import Horizontal
+from textual.widgets import Static
 from block import Block
 
 class Sysinfo(Static):
-    CSS_PATH = "tcss/sysinfo.tcss"
+    DEFAULT_CSS = """
+        Sysinfo {
+            height: 25%;
+            align: center top;
+        }
+    """
     
     def compose(self) -> ComposeResult:
         yield Horizontal(
-            Block("TWO", classes="inner-box"),
-            Static("Two", classes="inner-box"),
-            Static("three", classes="inner-box"),
-            Static("four", classes="inner-box"),
+            Block(label="cpu"),
+            Block(label="mem"),
+            Block(label="disk"),
+            Block(label="active user"),
         )
-        
+        # yield Block()
+        # yield Block()
+        # yield Block()
+        # yield Block()
