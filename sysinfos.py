@@ -14,6 +14,7 @@ class SysInfos(Static):
             align: center top;
             padding: 0 0 0 0;
             border: none;
+            background: $background-lighten-1;
         }
     """
 
