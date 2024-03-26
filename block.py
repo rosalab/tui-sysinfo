@@ -21,7 +21,7 @@ class Block(Static, inherit_bindings=False):
         }
     """
 
-    text = reactive("0.0", recompose=True)
+    text = reactive("0.0")
 
     def __init__(self, label,
         name: str | None = None,
@@ -41,6 +41,12 @@ class Block(Static, inherit_bindings=False):
     def on_mount(self):
         self.border_title = self.func_maps[self.label]['title']
         self.set_interval(1, self.func_maps[self.label]['updateFunc'])
+
+    def watch_text(self):
+        try:
+            self.query_one(Digits).update(self.text)
+        except Exception as e:
+            pass
 
     def update_cpu(self):
         self.text = str(psutil.cpu_percent()) + "%"
