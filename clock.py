@@ -6,6 +6,7 @@ from datetime import date, datetime
 class Clock(Static):
     currentTime = reactive(datetime.now().strftime("%H:%M:%S"))
     currentDate = reactive(datetime.now().strftime("%m-%d-%Y"))
+    blink = reactive(False)
 
     DEFAULT_CSS = """
         Clock {
@@ -50,6 +51,7 @@ class Clock(Static):
     def update_time(self):
         self.currentTime = self.get_time()
         self.currentDate = self.get_date()
+        self.blink = not self.blink
 
     def get_time(self):
         return datetime.now(pytz.timezone(self.label)).strftime("%H:%M:%S")
@@ -61,5 +63,9 @@ class Clock(Static):
         try:
             self.query_one("#clock-time").update(self.currentTime)
             self.query_one("#clock-date").update(self.currentDate)
+            if self.blink:
+                self.styles.border = ("blank", "white")
+            else:
+                self.styles.border = ("round", "white")
         except Exception as e:
-            pass
+            print(e)

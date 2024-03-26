@@ -1,6 +1,6 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Static
-from sysinfo import Sysinfo
+from sysinfos import SysInfos
 from weather import Weather
 from clocks import Clocks
 
@@ -12,7 +12,8 @@ class TuiSysInfo(App):
     """
 
     def compose(self) -> ComposeResult:
-        yield Sysinfo()
+        # self.dark = False
+        yield SysInfos()
         yield Clocks()
         yield Weather()
 

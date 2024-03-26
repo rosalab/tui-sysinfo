@@ -1,6 +1,6 @@
 from textual.app import ComposeResult
 from textual.widgets import Static
-from block import Block
+from sysinfo import SysInfo
 from clock import Clock
 
 
@@ -15,6 +15,7 @@ class Clocks(Static):
             align: center top;
             padding: 0 0 0 0;
             border: none;
+            background: $background-lighten-2;
         }
     """
 
