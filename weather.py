@@ -19,7 +19,7 @@ class Weather(Static):
         width: 100%;
         max-height: 70%;
         color: auto;
-        background: $background-lighten-3;
+        background: $primary-lighten-1;
     }
     """
 
