@@ -9,7 +9,7 @@ class Clocks(Static):
         Clocks {
             layout: grid;
             grid-size: 3 1;
-            grid-gutter: 20;
+            grid-gutter: 15;
             height: 20%;
             min-height: 5;
             align: center top;

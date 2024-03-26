@@ -12,17 +12,20 @@ class Clock(Static):
             align-horizontal: center;
             box-sizing: content-box;
             border: round white;
+            max-width: 30;
             width: auto;
             align: center middle;
             border-title-style: italic;
             border-title-align: center;
         }
       
-        .digits {
-            padding: 1;
+        Digits {
             text-align: center;
         }
     
+        .clock-time {
+            text-align: center;
+        }
     """
 
     def __init__(self, label,
@@ -32,7 +35,10 @@ class Clock(Static):
         disabled: bool = False):
         super().__init__(name=name, id=id, classes=classes, disabled=disabled)
         self.label = label
-        self.border_title = label
+        if label == 'Etc/GMT+12':
+            self.border_title = "Anywhere on Earth"
+        else:
+            self.border_title = label
 
     def on_mount(self):
         self.set_interval(1, self.update_time)
