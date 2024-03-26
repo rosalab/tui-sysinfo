@@ -1,6 +1,6 @@
 from textual.app import ComposeResult
 from textual.widgets import Static
-from block import Block
+from sysinfo import SysInfo
 from clock import Clock
 
 
