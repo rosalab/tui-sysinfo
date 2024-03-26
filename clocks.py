@@ -15,7 +15,7 @@ class Clocks(Static):
             align: center top;
             padding: 0 0 0 0;
             border: none;
-            background: $background-lighten-2;
+            background: $primary-darken-1;
         }
     """
 

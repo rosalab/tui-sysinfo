@@ -13,8 +13,8 @@ class TuiSysInfo(App):
 
     def compose(self) -> ComposeResult:
         # self.dark = False
-        yield SysInfos()
         yield Clocks()
+        yield SysInfos()
         yield Weather()
 
 if __name__ == "__main__":
