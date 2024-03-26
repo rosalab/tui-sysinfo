@@ -1,7 +1,7 @@
 from textual.app import ComposeResult
 from textual.widgets import Static
-from sysinfo import SysInfo
-from clock import Clock
+
+from widgets.clock import Clock
 
 
 class Clocks(Static):
@@ -23,4 +23,3 @@ class Clocks(Static):
         yield Clock(label="America/New_York")
         yield Clock(label="UTC")
         yield Clock(label="Etc/GMT+12")
-
