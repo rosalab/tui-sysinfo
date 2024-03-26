@@ -25,3 +25,7 @@ textual run App.py
 - sysinfo.py: Contains the Sysinfo class that displays system information.
 - clocks.py: Contains the Clocks class that displays the current time in different time zones.
 - weather.py: Contains the Weather class that fetches and displays the current weather information.
+
+## Screenshot
+
+![image](https://github.com/w93163red/tui-sysinfo/assets/7308728/64b07c29-3e1d-4ec7-8c97-7aba4ce8ad3e)
