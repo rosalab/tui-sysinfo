@@ -8,8 +8,8 @@ class Sysinfo(Static):
             layout: grid;
             grid-size: 4 1;
             grid-gutter: 5;
-            height: 15%;
-            min-height: 10;
+            height: 10%;
+            min-height: 7;
             align: center top;
             padding: 0 0 0 0;
             border: none;
