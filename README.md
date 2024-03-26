@@ -4,9 +4,7 @@ TuiSysInfo is a terminal-based system information application developed in Pytho
 
 ## Features
 - System Information: Displays system information such as CPU usage, memory usage, disk usage, and the active user.
-
 - Clocks: Displays the current time in different time zones including America/New_York, UTC, and Etc/GMT+12.
-
 - Weather: Fetches and displays the current weather information
 
 ## Installation
