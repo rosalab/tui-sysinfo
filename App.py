@@ -5,7 +5,11 @@ from weather import Weather
 from clocks import Clocks
 
 class TuiSysInfo(App):
-    CSS_PATH = "tcss/app.tcss"
+    DEFAULT_CSS = """
+        Screen {
+            layout: vertical;
+        }
+    """
 
     def compose(self) -> ComposeResult:
         yield Sysinfo()
