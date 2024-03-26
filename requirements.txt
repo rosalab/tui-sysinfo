@@ -1,0 +1,4 @@
+textual~=0.53.1
+psutil~=5.9.8
+requests~=2.31.0
+pytz~=2024.1
