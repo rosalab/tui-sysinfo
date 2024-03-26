@@ -26,4 +26,4 @@ textual run App.py
 
 ## Screenshot
 
-![image](https://github.com/w93163red/tui-sysinfo/assets/7308728/64b07c29-3e1d-4ec7-8c97-7aba4ce8ad3e)
+![image](https://github.com/w93163red/tui-sysinfo/assets/7308728/e106d6cd-009e-4608-a372-b2e2e3048064)
