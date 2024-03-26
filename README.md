@@ -18,11 +18,10 @@ pip install -r requirements.txt
 textual run App.py
 ```
 
-## Files
+## Directories / Files
 - App.py: The main application script that runs the TuiSysInfo application.
-- sysinfo.py: Contains the Sysinfo class that displays system information.
-- clocks.py: Contains the Clocks class that displays the current time in different time zones.
-- weather.py: Contains the Weather class that fetches and displays the current weather information.
+- View/: contains the component that constructs the page
+- Widgets/: Contains the custom widgets that build the component
 
 ## Screenshot
 
