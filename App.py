@@ -1,8 +1,9 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Static
-from sysinfos import SysInfos
-from weather import Weather
-from clocks import Clocks
+
+from view.clocks import Clocks
+from view.sysinfos import SysInfos
+from view.weather import Weather
+
 
 class TuiSysInfo(App):
     DEFAULT_CSS = """
@@ -16,6 +17,7 @@ class TuiSysInfo(App):
         yield Clocks()
         yield SysInfos()
         yield Weather()
+
 
 if __name__ == "__main__":
     app = TuiSysInfo()

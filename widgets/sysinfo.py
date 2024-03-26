@@ -1,8 +1,7 @@
-from textual import events
-from textual.app import App, ComposeResult
+import psutil
+from textual.app import ComposeResult
 from textual.reactive import reactive
 from textual.widgets import Static, Digits
-import psutil
 
 
 class SysInfo(Static, inherit_bindings=False):

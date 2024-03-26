@@ -1,7 +1,9 @@
+from datetime import datetime
+
 import pytz
 from textual.reactive import reactive
 from textual.widgets import Static, Digits
-from datetime import date, datetime
+
 
 class Clock(Static):
     currentTime = reactive(datetime.now().strftime("%H:%M:%S"))
@@ -30,10 +32,10 @@ class Clock(Static):
     """
 
     def __init__(self, label,
-        name: str | None = None,
-        id: str | None = None,
-        classes: str | None = None,
-        disabled: bool = False):
+                 name: str | None = None,
+                 id: str | None = None,
+                 classes: str | None = None,
+                 disabled: bool = False):
         super().__init__(name=name, id=id, classes=classes, disabled=disabled)
         self.label = label
         if label == 'Etc/GMT+12':
