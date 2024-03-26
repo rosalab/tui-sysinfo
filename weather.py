@@ -18,6 +18,7 @@ class Weather(Static):
         text-align: center;
         width: 100%;
         max-height: 70%;
+        color: auto;
     }
     """
 

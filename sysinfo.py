@@ -17,8 +17,9 @@ class SysInfo(Static, inherit_bindings=False):
         }
       
         .digits {
-            padding: 1;
+            # padding: 1;
             text-align: center;
+            color: auto;
         }
     """
 
@@ -50,22 +51,13 @@ class SysInfo(Static, inherit_bindings=False):
             if '%' in self.text:
                 num = self.text[:-1]
                 if float(num) > 80:
-                    digit.styles.color = 'red'
-                    self.styles.border_title_color = 'red'
-                elif float(num) > 60:
-                    digit.styles.color = 'yellow'
-                    self.styles.border_title_color = 'yellow'
-                elif float(num) > 40:
-                    digit.styles.color = 'orange'
-                    self.styles.border_title_color = 'orange'
-                elif float(num) > 20:
-                    digit.styles.color = 'green'
-                    self.styles.border_title_color = 'green'
+                    digit.styles.backgound = "maroon"
+                elif float(num) > 50:
+                    digit.styles.background = "goldenrod"
                 else:
-                    digit.styles.color = 'white'
-                    self.styles.border_title_color = 'white'
+                    digit.styles.background = 'darkgreen'
         except Exception as e:
-            pass
+            print(e)
 
     def update_cpu(self):
         self.text = str(psutil.cpu_percent()) + "%"
