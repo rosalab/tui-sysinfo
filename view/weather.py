@@ -17,9 +17,8 @@ class Weather(Static):
         border: round white;
         text-align: center;
         width: 100%;
-        max-height: 70%;
+        max-height: 100%;
         color: auto;
-        background: $primary-lighten-1;
     }
     """
 
@@ -34,7 +33,7 @@ class Weather(Static):
 
     def on_mount(self):
         self.border_title = "Weather Report"
-        self.set_interval(30, self.update_weather)
+        self.set_interval(120, self.update_weather)
 
     def update_weather(self):
         self.text = get_weather_data()
