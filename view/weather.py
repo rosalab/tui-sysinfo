@@ -5,7 +5,7 @@ from textual.widgets import Static
 
 
 def get_weather_data():
-    resp = requests.get("https://wttr.in/blacksburg?2dT")
+    resp = requests.get("https://wttr.in/blacksburg?2dTm")
     return "\n".join(resp.text.splitlines()[:-3])
 
 

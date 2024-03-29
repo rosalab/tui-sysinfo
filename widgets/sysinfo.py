@@ -65,7 +65,7 @@ class SysInfo(Static, inherit_bindings=False):
         self.text = str(psutil.virtual_memory().percent) + "%"
 
     def update_disk(self):
-        self.text = str(psutil.disk_usage('/').percent) + "%"
+        self.text = str(psutil.disk_usage('/home').percent) + "%"
 
     def update_active_sessions(self):
         self.text = str(len(psutil.users()))
