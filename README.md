@@ -23,6 +23,18 @@ textual run App.py
 - View/: contains the component that constructs the page
 - Widgets/: Contains the custom widgets that build the component
 
+## For deployment in Rosa-pi
+
+1. `startx` to start the openbox session
+2. When you see the mouse cursor, right click the screen, and click `terminal emulator`
+3. type `xrdg .Xdefaults`
+4. close the current terminal and reopen a new one 
+5. ssh to the server and `cd tui-sysinfo`
+6. `git pull`
+7. `source venv/bin/activate`
+8. `textual run App.py`
+
+
 ## Screenshot
 
 ![image](https://github.com/w93163red/tui-sysinfo/assets/7308728/f05aa802-743b-4a1f-8421-2b058404fe1a)
