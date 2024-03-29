@@ -50,7 +50,7 @@ class SysInfo(Static, inherit_bindings=False):
             if '%' in self.text:
                 num = self.text[:-1]
                 if float(num) > 80:
-                    digit.styles.backgound = "maroon"
+                    digit.styles.background = "maroon"
                 elif float(num) > 50:
                     digit.styles.background = "goldenrod"
                 else:
@@ -65,7 +65,7 @@ class SysInfo(Static, inherit_bindings=False):
         self.text = str(psutil.virtual_memory().percent) + "%"
 
     def update_disk(self):
-        self.text = str(psutil.disk_usage('/').percent) + "%"
+        self.text = str(psutil.disk_usage('/home').percent) + "%"
 
     def update_active_sessions(self):
         self.text = str(len(psutil.users()))
