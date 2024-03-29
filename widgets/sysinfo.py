@@ -50,7 +50,7 @@ class SysInfo(Static, inherit_bindings=False):
             if '%' in self.text:
                 num = self.text[:-1]
                 if float(num) > 80:
-                    digit.styles.backgound = "maroon"
+                    digit.styles.background = "maroon"
                 elif float(num) > 50:
                     digit.styles.background = "goldenrod"
                 else:
