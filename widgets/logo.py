@@ -1,11 +1,12 @@
-from textual.widgets import Static
-from textual.containers import Container
+from textual.widgets import Static, Label
+from textual.app import ComposeResult
+
 
 class Logo(Static):
 	DEFAULT_CSS = """
 	Logo {
 		color: auto;
-		max-width: 1fr;	
+		# max-width: 1fr;	
 		align: right bottom;
 		text-align: right;
 		height: 100%;
@@ -27,6 +28,6 @@ class Logo(Static):
  RETHINKING OS ABSTRACTIONS
 """
 
-	def compose(self):
-		yield Static(self.logo)
+	def compose(self) -> ComposeResult:
+		yield Label(self.logo)
 
