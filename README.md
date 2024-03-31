@@ -37,4 +37,4 @@ textual run App.py
 
 ## Screenshot
 
-![image](https://github.com/rosalab/tui-sysinfo/assets/7308728/c8a2384c-b3c7-455c-b8d2-5382f782ab94)
+![image](https://github.com/rosalab/tui-sysinfo/assets/7308728/18597b19-9e92-4cc1-beb5-ba382f24e072)
