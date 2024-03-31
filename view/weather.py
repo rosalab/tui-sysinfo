@@ -36,7 +36,11 @@ class Weather(Static):
         self.set_interval(120, self.update_weather)
 
     def update_weather(self):
-        self.text = get_weather_data()
+        # The weather would fail due to the SSLError; in this case, just keep the old data
+        try:
+            self.text = get_weather_data()
+        except Exception as e:
+            pass
 
     def watch_text(self):
         try:
