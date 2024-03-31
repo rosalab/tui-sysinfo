@@ -15,7 +15,7 @@ class TuiSysInfo(App):
         #container {
             layout: grid;
             grid-size: 2;
-            grid-columns: 4fr 1fr;
+            grid-columns: 6fr 1fr;
             background: $primary-background;
         }
     """

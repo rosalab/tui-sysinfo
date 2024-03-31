@@ -17,7 +17,7 @@ class Weather(Static):
         border: round white;
         text-align: center;
         width: 100%;
-        max-height: 100%;
+        height: 100%;
         color: auto;
     }
     """

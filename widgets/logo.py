@@ -10,6 +10,7 @@ class Logo(Static):
 		align: right bottom;
 		text-align: right;
 		height: 100%;
+		width: 100%;
 	}
 """
 	logo = r"""
