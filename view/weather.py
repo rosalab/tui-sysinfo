@@ -14,7 +14,7 @@ class Weather(Static):
     Weather {
         border-title-style: italic;
         border-title-align: center;
-        border: round white;
+        border: hkey white;
         text-align: center;
         width: 100%;
         height: 100%;

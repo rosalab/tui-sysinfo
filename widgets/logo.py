@@ -6,11 +6,10 @@ class Logo(Static):
 	DEFAULT_CSS = """
 	Logo {
 		color: auto;
-		# max-width: 1fr;	
-		align: right bottom;
-		text-align: right;
+		align: center top;
 		height: 100%;
 		width: 100%;
+		padding: 0 0 0 0;
 	}
 """
 	logo = r"""
@@ -27,7 +26,7 @@ class Logo(Static):
  |  _ <| |_| |___) / ___ \ 
  |_| \_\\___/|____/_/   \_\
  RETHINKING OS ABSTRACTIONS
-"""
+""".rstrip()
 
 	def compose(self) -> ComposeResult:
 		yield Label(self.logo)
